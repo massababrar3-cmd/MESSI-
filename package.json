@@ -1,0 +1,22 @@
+{
+  "name": "messi-mine-planning",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "python3 scripts/dev.py",
+    "start": "python3 scripts/dev.py --production",
+    "setup": "bash scripts/setup.sh",
+    "build": "npm run build --workspace frontend",
+    "typecheck": "npm run typecheck --workspace frontend",
+    "test": ".venv/bin/python -m pytest backend/tests -q",
+    "test:e2e": "npm run test:e2e --workspace frontend --",
+    "backup": "PYTHONPATH=backend .venv/bin/python -m messi.backup",
+    "smoke": "PYTHONPATH=backend .venv/bin/python scripts/smoke.py"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

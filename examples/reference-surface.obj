@@ -1,0 +1,7 @@
+# Synthetic survey plane. Reference viewing only; not a volume.
+v 641980 7489980 232
+v 642220 7489980 232
+v 641980 7490060 232
+v 642220 7490060 232
+f 1 2 3
+f 2 4 3

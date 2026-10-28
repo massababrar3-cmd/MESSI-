@@ -1,0 +1,11 @@
+id,x,y,z,dx,dy,dz,density,material,basis,ash,predecessors,priority,destination
+B-001,0,0,0,10,10,10,2.5,waste,dry,,,1,dump
+B-002,10,0,0,10,10,10,2.5,waste,dry,,B-001,2,dump
+B-003,20,0,0,10,10,10,2.5,waste,dry,,B-002,3,dump
+B-004,30,0,0,10,10,10,2.5,waste,dry,,B-003,4,dump
+B-005,40,0,0,10,10,10,2.5,waste,dry,,B-004,5,dump
+B-006,50,0,0,10,10,10,2.5,waste,dry,,B-005,6,dump
+B-007,60,0,0,10,10,10,2.5,waste,dry,,B-006,7,dump
+B-008,70,0,0,10,10,10,2.5,waste,dry,,B-007,8,dump
+B-009,80,0,0,10,10,10,2.5,waste,dry,,B-008,9,dump
+B-010,90,0,0,10,10,10,2.5,waste,dry,,B-009,10,dump
