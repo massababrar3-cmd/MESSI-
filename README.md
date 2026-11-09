@@ -21,6 +21,12 @@ An independent **browser-based open-cut coal planning application**. Import a ph
 
 ![MESSI planning workspace with synthetic data](docs/screenshots/planning-studio.png)
 
+## Windows laptop — no separate Docker or Python
+
+Use the **MESSI-Windows-Portable.zip** package supplied with the delivery. Extract All, open MESSI-Windows and double-click **START-MESSI.cmd**. Your browser and initial private login file open automatically. Keep the launcher window open while using MESSI. [Easy instructions and verification limits](docs/WINDOWS-PORTABLE.md).
+
+The bundled local edition uses your Windows AppData directory to preserve projects. Developers may also build/test a Windows package using [the Windows workflow](.github/workflows/windows-portable.yml).
+
 ## Quick start
 
 Native server development uses Linux/WSL. Requirements: **Node.js 22.12+** (tested 24.19), **Python 3.12**, and **uv**. Docker is optional for the PostgreSQL/container route. No Python or Node installation is required on browser clients.

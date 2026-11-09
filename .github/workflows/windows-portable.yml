@@ -1,0 +1,38 @@
+name: Windows portable package
+on:
+  push:
+    paths:
+      - 'packaging/windows/**'
+      - 'backend/**'
+      - 'frontend/**'
+      - 'scripts/smoke.py'
+      - '.github/workflows/windows-portable.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-smoke:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: npm ci
+      - run: npm run build
+      - name: Build verified standalone package
+        run: python packaging/windows/build.py
+        env:
+          MESSI_WINDOWS_ZIP: ${{ github.workspace }}/.local/MESSI-Windows-Portable.zip
+      - name: Test actual bundled Windows runtime
+        run: python packaging/windows/smoke_test.py .local/windows-portable/MESSI-Windows --native
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MESSI-Windows-Portable
+          path: |
+            .local/MESSI-Windows-Portable.zip
+            .local/MESSI-Windows-Portable.zip.sha256
+          if-no-files-found: error

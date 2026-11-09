@@ -1,0 +1,29 @@
+MESSI - Windows Portable (64-bit Windows 10 / 11)
+
+1. Right-click the downloaded ZIP and choose EXTRACT ALL.
+2. Open the extracted MESSI-Windows folder.
+3. Double-click START-MESSI.cmd.
+4. Your browser opens MESSI. On first launch a private login file opens in Notepad.
+   Copy its email and password into the MESSI sign-in screen.
+5. Choose Bowen Basin - Pilot, then press Run schedule.
+
+Docker, Python and Node do NOT need to be installed separately.
+The required Python runtime and application libraries are included in this folder.
+No internet connection is needed for the bundled local planning workflow.
+Use your existing Edge or Chrome browser with WebGL/hardware acceleration.
+
+Keep the MESSI console window open while using the application.
+Close it to stop MESSI. Double-click START-MESSI.cmd to run again.
+If you need login details again, double-click SHOW-LOGIN.cmd.
+
+Private data is saved in: %LOCALAPPDATA%\MESSI
+This data survives replacing/moving the extracted software folder.
+Do not delete that data folder. Keep private backups of it with MESSI closed.
+Do not share the login file or your mine data.
+
+This is the existing engineering pilot, not a certified production mine plan.
+This portable edition is local to your laptop; it does not host a public/team site.
+Do not run from inside the ZIP or separate the runtime/app folders.
+
+The package is not digitally code-signed. Follow your company's software policy;
+do not disable antivirus or Windows protection to run it.
